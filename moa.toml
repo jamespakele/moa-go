@@ -1,0 +1,45 @@
+[aggregator]
+  provider = "ollama"
+  model = "glm-5.2:cloud"
+  temperature = 0.4
+  max_tokens = 4096
+
+[[reference]]
+  provider = "ollama"
+  model = "nemotron-3-super:cloud"
+  label = "nemotron"
+
+[[reference]]
+  provider = "ollama"
+  model = "qwen3.5:397b-cloud"
+  label = "qwen35"
+
+[[reference]]
+  provider = "ollama"
+  model = "deepseek-v4-flash:cloud"
+  label = "deepseek-v4-flash"
+
+[backend]
+  backend = "native"
+  timeout_secs = 120
+  reference_thinking = "low"
+
+[synthesis]
+  temperature = 0.4
+  max_tokens = 4096
+  output_dir = "./output"
+  max_rounds = 0
+  bmad_compatible = false
+  bmad_config_path = "_bmad/bmm/config.yaml"
+
+[search]
+  provider = "tavily"
+  api_key = ""
+  max_queries = 5
+
+[verifier]
+  enabled = false
+  provider = ""
+  model = ""
+  temperature = 0.2
+  max_tokens = 4096
