@@ -1,0 +1,15 @@
+# Build artifacts
+/moa
+*.exe
+
+# Generated outputs
+/output/
+/internal/engine/output/
+*.log
+
+# Local environment / secrets
+.env
+.env.*
+
+# Dependency vendoring
+/vendor/
